@@ -1,0 +1,39 @@
+---
+layout: layouts/page.njk
+pagination:
+  data: collections.posts
+  size: 12
+  reverse: true
+  alias: posts
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<section class="container mw-lg">
+  {% for post in posts %}
+    {% include 'components/article.njk' %}
+  {% endfor %}
+
+  <div class="d-flex justify-content-center">
+    <ul class="pagination pagination-lg">
+      {% if pagination.href.previous %}
+        <li class="page-item">
+          <a class="page-link" href="{{ pagination.href.previous | url }}">Previous</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+      {% endif %}
+
+      {% if pagination.href.next %}
+        <li class="page-item">
+          <a class="page-link" href="{{ pagination.href.next | url }}">Next</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <a class="page-link">Next</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+
+_site/
+node_modules/
+
+.env

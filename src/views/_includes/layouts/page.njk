@@ -1,0 +1,13 @@
+---
+layout: layouts/default.njk
+---
+
+<header class="banner banner-small position-relative mb-section">
+  {% include 'components/navbar.njk' %}
+
+  <div class="container text-center position-absolute top-50 start-50 translate-middle">
+    <h1 class="text-white display-1 text-capitalize fw-medium">{{ title | default('Blog posts', true) }}</h1>
+  </div>
+</header>
+
+{{ content | safe }}

@@ -1,0 +1,23 @@
+---
+layout: layouts/homepage.njk
+---
+
+<section id="about" class="container text-center">
+  <h2 class="display-6 mb-4">Hello Everyone 👋</h2>
+  <p class="fs-5">I'm a fullstack developer who likes to tinker and try new stuff.</p>
+  <p class="fs-5">I like to play with technologies and see "under the hood"</p>
+  <p class="fs-5">I'm a dad and likes to play guitar with my kid, and I am a big fan of craft beers and hiking</p>
+  <p class="fs-5">Computers and technology is a big part of my life, it's my job but also my favorite hobby</p>
+</section>
+
+<section class="container mw-lg">
+  <h2 class="display-2 text-center mb-5">Latest Posts</h2>
+
+  {% for post in collections.latest %}
+    {% include 'components/article.njk' %}
+  {% endfor %}
+
+  <div class="d-flex justify-content-center">
+    <a href="{{ '/blog' | url }}" class="btn btn-primary btn-lg text-capitalize px-5">See all</a>
+  </div>
+</section>

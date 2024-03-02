@@ -1,0 +1,47 @@
+@use "bootstrap/scss/bootstrap";
+
+header.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/assets/images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+
+  &.banner-small {
+    height: 50vh;
+  }
+}
+
+.mw-lg {
+  max-width: 64em;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/** SECTIONS **/
+$section-space: 6rem;
+
+section, footer {
+  padding-top: $section-space;
+  padding-bottom: $section-space;
+}
+
+.mt-section {
+  margin-top: $section-space;
+}
+
+.mb-section {
+  margin-bottom: $section-space;
+}
+
+/** ARTICLES **/
+.article-post {
+  img {
+    max-width: 32em;
+    border-radius: 5px;
+    display: block;
+    margin: 4rem auto;
+  }
+}

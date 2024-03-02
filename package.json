@@ -1,0 +1,31 @@
+{
+  "name": "astlaure.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel start:*",
+    "start:eleventy": "eleventy --serve",
+    "start:vite": "vite --watch build",
+    "build": "npm-run-all --parallel build:*",
+    "build:eleventy": "eleventy",
+    "build:vite": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eleventy",
+    "website"
+  ],
+  "author": "Alexandre St-Laurent",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "bootstrap": "^5.3.3",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.71.1",
+    "vite": "^5.1.4"
+  }
+}

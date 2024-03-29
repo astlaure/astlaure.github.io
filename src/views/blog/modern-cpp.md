@@ -2,12 +2,27 @@
 layout: layouts/post.njk
 title: Amazing Modern C++
 date: 2024-03-01
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sem turpis, mattis nec posuere eu, egestas sed sapien. Phasellus sit amet egestas nulla, pellentesque facilisis ante. Nunc nec vehicula felis. Fusce malesuada nibh a odio egestas facilisis. Duis cursus sed turpis ac gravida. Sed sit amet nulla accumsan, tristique libero vitae, consectetur dui. Praesent ullamcorper egestas purus eu vulputate. Curabitur nec tellus pulvinar, commodo felis quis, consectetur nulla. Nulla sapien sapien, sodales et cursus ut, maximus at justo. Fusce placerat, ligula id tincidunt molestie, neque neque luctus risus, ac porta mi sem ornare leo. Pellentesque dolor tellus, faucibus non condimentum vel
+description: C++ is a daunting, enormous and scary beast. The pointers, the tooling, the memory issues and dependency management makes it difficult for new and old programmers but is it still accurate? C++ went through a lot of changes starting with C++11 and I believe the beast is getting way more tamed than we think. Let's dive in on the why.
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sem turpis, mattis nec posuere eu, egestas sed sapien. Phasellus sit amet egestas nulla, pellentesque facilisis ante. Nunc nec vehicula felis. Fusce malesuada nibh a odio egestas facilisis. Duis cursus sed turpis ac gravida. Sed sit amet nulla accumsan, tristique libero vitae, consectetur dui. Praesent ullamcorper egestas purus eu vulputate. Curabitur nec tellus pulvinar, commodo felis quis, consectetur nulla. Nulla sapien sapien, sodales et cursus ut, maximus at justo. Fusce placerat, ligula id tincidunt molestie, neque neque luctus risus, ac porta mi sem ornare leo. Pellentesque dolor tellus, faucibus non condimentum vel, lobortis at nulla. Mauris pretium diam ac purus porta placerat. Ut eu lectus tellus. Aenean ac dui libero. In hac habitasse platea dictumst.
+C++ is a daunting, enormous and scary beast. The pointers, the tooling, the memory issues and dependency management makes it difficult for new and old programmers but is it still accurate? C++ went through a lot of changes starting with C++11 and I believe the beast is getting way more tamed than we think. Let's dive in on the why.
 
-Mauris tincidunt, massa suscipit tincidunt laoreet, dui orci interdum sapien, vel interdum lacus quam a sem. In ut lorem in est volutpat cursus. Cras tempus placerat lorem, at sodales urna faucibus eu. Cras lobortis libero faucibus mi condimentum, et placerat tellus maximus. Maecenas id sapien efficitur felis scelerisque posuere nec nec sem. Nulla egestas vehicula urna eu molestie. Cras nunc turpis, sollicitudin nec efficitur quis, varius pretium erat. Donec luctus fringilla sapien, sit amet placerat tortor sollicitudin vitae. Praesent aliquam velit at laoreet pretium. Nam ac leo ac turpis gravida tempor vel id nisl.
+### Smart Pointers
 
-Integer venenatis enim quis feugiat porta. Sed imperdiet at dui at finibus. Mauris et turpis risus. Nam sed tellus vehicula, viverra nunc at, finibus lorem. Etiam risus nulla, posuere sit amet augue quis, molestie venenatis erat. Praesent laoreet erat sem. Vivamus vitae egestas erat, sit amet feugiat orci. Vivamus vel ex ut justo viverra laoreet ac vel ipsum.
+Smart pointers, on the outside, looks like a pointer in a language like C#. The initialization and destruction is managed for you. No need of the new and delete keywords, C++ will do it for you. The big difference with C# is that you still don't have a garbage collector and the cleanup is still done the C++ way, just not by hand. This is, for me, the biggest security feature of modern C++. Everyone should use them, always.
 
+The keywords are unique_ptr, shared_ptr and weak_ptr
+
+### CMake
+
+Let's be honest, CMake is hard. There's a lot of config to write, it's not straight forward and it is error prone. BUT, when it is done once, you can reuse it almost always with some tweaks and you're done. It is a thousand times better than doing a Makefile, it works on all main platforms and help ease the pain a lot.
+
+![cmake](assets/posts/modern-cpp/cmake.png)
+
+### Vcpkg
+
+This is a package manager for C++ created by Microsoft and is latest and greatest. You have a json config for the libraries and have the version in it. The down side is that it is had to pin point a version, you need to add it in the override section of the config or it will always select the latest when cloning.
+
+![vcpkg](assets/posts/modern-cpp/vcpkg.png)
+
+C++ is still evolving and it is evolving in the right way. The issue really is in older codebases were we can't use new versions and cannot use new safe features.

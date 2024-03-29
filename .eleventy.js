@@ -1,6 +1,7 @@
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/assets');
+  eleventyConfig.addPassthroughCopy({'./src/favicon.ico': 'favicon.ico'});
 
   eleventyConfig.addFilter('formatDate', dateObj => {
     return dateObj.toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: '2-digit', timeZone: 'utc' });

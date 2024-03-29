@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: Spring VS Quarkus
 date: 2024-03-01
 description: Spring is the most popular Java Enterprise framework used everywhere, but Quarkus is taking a lot of steam in this new microservice heavy world. Quarkus brings the Cloud Native mindset and was built from the ground up to support it and support Native builds using GraalVM.
+seo: Spring is the most popular Java Enterprise framework used everywhere, but Quarkus is taking a lot of steam in this new microservice heavy world.
 ---
 
 Spring is the most popular Java Enterprise framework used everywhere, but Quarkus is taking a lot of steam in this new microservice heavy world. Quarkus brings the Cloud Native mindset and was built from the ground up to support it and support Native builds using GraalVM.

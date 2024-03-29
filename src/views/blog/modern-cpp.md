@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: Amazing Modern C++
 date: 2024-03-01
 description: C++ is a daunting, enormous and scary beast. The pointers, the tooling, the memory issues and dependency management makes it difficult for new and old programmers but is it still accurate? C++ went through a lot of changes starting with C++11 and I believe the beast is getting way more tamed than we think. Let's dive in on the why.
+seo: C++ is a daunting, enormous and scary beast. The pointers, the tooling, the memory issues and dependency management makes it difficult for new and old programmers but is it still accurate?
 ---
 
 C++ is a daunting, enormous and scary beast. The pointers, the tooling, the memory issues and dependency management makes it difficult for new and old programmers but is it still accurate? C++ went through a lot of changes starting with C++11 and I believe the beast is getting way more tamed than we think. Let's dive in on the why.

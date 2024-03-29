@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: I'm ready to GO !
 date: 2024-03-28
 description: Currently I've been playing a lot with Go. I like the idea of it, it's compiled, simple, performant and the dev feedback is instant using the air package. I tried Go multiple times and everytime I didn't feel it but this time it is growing on me quite a lot.
+seo: Currently I've been playing a lot with Go. I like the idea of it, it's compiled, simple, performant and the dev feedback is instant using the air package.
 ---
 
 Currently I've been playing a lot with Go. I like the idea of it, it's compiled, simple, performant and the dev feedback is instant using the air package. I tried Go multiple times and everytime I didn't feel it but this time it is growing on me quite a lot.
